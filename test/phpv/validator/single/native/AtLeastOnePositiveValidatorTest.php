@@ -1,0 +1,36 @@
+<?php
+
+use phpv\validator\set\KeyValueSetValidator;
+use phpv\input\KeyValue;
+use phpv\validator\single\native\AtLeastOnePositiveValidator;
+
+class AtLeastOnePositiveValidatorTest extends PHPUnit_Framework_TestCase {
+
+   private $fv = null;
+
+   public function setUp() {
+      $this->fv = new KeyValueSetValidator();
+   }
+
+   public function tearDown() {
+      unset($this->fv);
+   }
+
+   public function testStandaloneSuccess() {
+      $validator = new AtLeastOnePositiveValidator(array(
+         new KeyValue("tennis", "on"),
+         new KeyValue("football", "off"),
+         new KeyValue("swimming", "off")
+      ), "error!", "on");
+      $this->assertTrue($validator->getValidationOutput()->isValid());
+   }
+
+   public function testStandaloneFailure() {
+      $validator = new AtLeastOnePositiveValidator(array(
+         new KeyValue("tennis", "off"),
+         new KeyValue("football", "off"),
+         new KeyValue("swimming", "off")
+      ), "error!", "on");
+      $this->assertFalse($validator->getValidationOutput()->isValid());
+   }
+}
