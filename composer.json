@@ -5,10 +5,9 @@
    "keywords": ["validation", "security"],
    "license": "GNU GPL v3",
    "authors": [
-   {
-      "name": "fabs aka (nourdine)",
-      "email": "admin@nourdine.net"
-   }
+      {
+         "name": "fabs aka (nourdine)"
+      }
    ],
    "require": {
       "php": ">=5.3"
