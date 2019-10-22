@@ -3,7 +3,6 @@
    "type": "library",
    "description": "A validation framework based on the glorious composite pattern",
    "keywords": ["validation", "security"],
-   "license": "GNU GPL v3",
    "authors": [
       {
          "name": "fabs aka (nourdine)"
