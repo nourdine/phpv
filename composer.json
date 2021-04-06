@@ -3,6 +3,7 @@
    "type": "library",
    "description": "A validation framework based on the glorious composite pattern",
    "keywords": ["validation", "security"],
+   "license": "MIT",
    "authors": [
       {
          "name": "fabs aka (nourdine)"
