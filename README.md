@@ -353,7 +353,3 @@ In the following table are listed all the leaf validators netively supported by 
       <td>`KeyValue $kv`</td>
    </tr>
 <table>
-
-### 11. Conclusion
-
-Any doubt, question or should you want to suggest a feature, just send me an email at admin[at]nourdine.net
