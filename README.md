@@ -7,7 +7,7 @@ PHPV
 
 ### 2. Class loader
 
-In order to have _phpv_ up and runnig you have to load it first. Here are the bare (coding) necessities *you must fullfill* in order to have a fully working environment.
+In order to have _phpv_ up and running you have to load it first. Here are the bare (coding) necessities *you must fullfill* in order to have a fully working environment.
 
 ```php
 include_once 'path-to-phpv-lib-folder/src/phpv/autoload.php';
