@@ -352,7 +352,7 @@ In the following table are listed all the leaf validators netively supported by 
    </tr>
 <table>
 
-### Running Unit Tests
+### 11. Running Unit Tests
 
 ```
 composer run-script test
