@@ -7,13 +7,13 @@ PHPV
 
 ### 2. Class loader
 
-In order to have _phpv_ up and running you have to load it first. Here are the bare (coding) necessities *you must fullfill* in order to have a fully working environment.
+Once you have added phpv to your `composer.json` and run `composer install` you can then load your dependencies using the following:
 
 ```php
 include_once 'vendor/autoload.php';
 ```
 
-Once this code has been executed, you can start using _phpv_ classes freely in your code without having to explicitly make all the files imports.
+You probably knew this already but I thought to specify it anyway ;)
 
 ### 3. Validator
 
