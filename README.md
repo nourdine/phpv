@@ -10,9 +10,7 @@ PHPV
 In order to have _phpv_ up and running you have to load it first. Here are the bare (coding) necessities *you must fullfill* in order to have a fully working environment.
 
 ```php
-include_once 'path-to-phpv-lib-folder/src/phpv/autoload.php';
-// or if you are using composer to build the library you can import
-// include_once 'path-to-phpv-lib-folder/vendor/autoload.php';
+include_once 'vendor/autoload.php';
 ```
 
 Once this code has been executed, you can start using _phpv_ classes freely in your code without having to explicitly make all the files imports.
