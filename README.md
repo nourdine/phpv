@@ -246,7 +246,7 @@ class BadWordsValidator extends KeyValueValidator {
    }
 
    /**
-    * This is the override of the absatract method inherited from the parent!
+    * This is the override of the abstract method inherited from the parent!
     * It is where the magic takes place ;)
     */
    public function validate() {
