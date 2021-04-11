@@ -3,7 +3,7 @@ PHPV
 
 ### 1. Intro
 
-**phpv** is a data validation framework for php. The framework can be used in a wide range of scenarios and **NOT** necessarilly for data form validation over the internet (although that will be the purpose for which you are likely to use it the most). _phpv_ has been conceived with the [http://en.wikipedia.org/wiki/Composite_pattern composite pattern] in mind and thanks to this approach the validation of a single piece of data or the validation of a group of values (a form) can be carried out uniformely and taking exactly the same actions on the objects involved (more on this in paragraph 4 and 5).
+**phpv** is a data validation framework for php. The framework can be used in a wide range of scenarios and **NOT** necessarilly for data form validation over the internet (although that will be the purpose for which you are likely to use it the most). _phpv_ has been conceived with the [http://en.wikipedia.org/wiki/Composite_pattern](Composite Pattern) in mind and thanks to this approach the validation of a single piece of data or the validation of a group of values (a form) can be carried out uniformely and taking exactly the same actions on the objects involved (more on this in paragraph 4 and 5).
 
 ### 2. Class loader
 
