@@ -1,21 +1,22 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\SizeRangeValidator;
 use phpv\input\KeyValue;
 
-class SizeRangeValidatorTest extends PHPUnit_Framework_TestCase {
+class SizeRangeValidatorTest extends TestCase {
 
    const INPUT_NAME = "username";
    const ERR_MSG = "error msg";
    
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

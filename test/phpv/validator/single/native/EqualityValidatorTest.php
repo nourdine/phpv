@@ -1,10 +1,11 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\EqualityValidator;
 use phpv\input\KeyValue;
 
-class EqualityValidatorTest extends PHPUnit_Framework_TestCase {
+class EqualityValidatorTest extends TestCase {
 
    const ERR_MSG = "error msg";
    const INPUT_NAME = "username";
@@ -12,11 +13,11 @@ class EqualityValidatorTest extends PHPUnit_Framework_TestCase {
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

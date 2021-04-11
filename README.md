@@ -353,3 +353,9 @@ In the following table are listed all the leaf validators netively supported by 
       <td>`KeyValue $kv`</td>
    </tr>
 <table>
+
+### Running Unit testing
+
+```
+composer run-script test
+```

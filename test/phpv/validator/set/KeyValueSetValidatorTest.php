@@ -1,20 +1,21 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\input\KeyValue;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\SizeRangeValidator;
 use phpv\validator\single\native\AlphaNumericalValidator;
 use phpv\validator\single\native\NumericalValidator;
 
-class KeyValueSetValidatorTest extends PHPUnit_Framework_TestCase {
+class KeyValueSetValidatorTest extends TestCase {
 
    private $composite = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->composite = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->composite);
    }
 

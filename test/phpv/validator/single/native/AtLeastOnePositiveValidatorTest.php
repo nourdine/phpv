@@ -1,18 +1,19 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\input\KeyValue;
 use phpv\validator\single\native\AtLeastOnePositiveValidator;
 
-class AtLeastOnePositiveValidatorTest extends PHPUnit_Framework_TestCase {
+class AtLeastOnePositiveValidatorTest extends TestCase {
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

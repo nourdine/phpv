@@ -10,11 +10,17 @@
       }
    ],
    "require": {
-      "php": ">=5.3"
+      "php": ">=5.3",
+      "phpunit/phpunit": "^9.5"
    },
    "autoload": {
       "psr-0": {
          "phpv": "src/"
       }
-   }
+   },
+   "scripts": {
+      "test": [
+         "vendor/bin/phpunit"
+      ]
+  }
 }

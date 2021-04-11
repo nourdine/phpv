@@ -1,17 +1,18 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\output\PlaceHolderResolver;
 use phpv\validator\single\native\NumericalValidator;
 use phpv\input\KeyValue;
 
-class PlaceHolderResolverTest extends PHPUnit_Framework_TestCase {
+class PlaceHolderResolverTest extends TestCase {
 
    const RV = "~";
    const MESSAGE_BEGIN = "message begin";
    const MESSAGE_END = "message end";
    private $str = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->str = self::MESSAGE_BEGIN . PlaceHolderResolver::PH . self::MESSAGE_END;
    }
 

@@ -1,20 +1,21 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\NumericalValidator;
 use phpv\input\KeyValue;
 
-class NumericalValidatorTest extends PHPUnit_Framework_TestCase {
+class NumericalValidatorTest extends TestCase {
 
    const NAN_MESSAGE = "not a number";
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

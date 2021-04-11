@@ -1,19 +1,20 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\Validator;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\EmailValidator;
 use phpv\input\KeyValue;
 
-class EmailValidatorTest extends PHPUnit_Framework_TestCase {
+class EmailValidatorTest extends TestCase {
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

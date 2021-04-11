@@ -1,11 +1,12 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\SizeRangeValidator;
 use phpv\validator\single\native\AlphaNumericalValidator;
 use phpv\input\KeyValue;
 
-class CombiningValidatorsTest extends PHPUnit_Framework_TestCase {
+class CombiningValidatorsTest extends TestCase {
 
    const SIZE_RANGE_ERROR_MSG = "size range error";
    const NAAN_ERROR_MSG = "this is not a alphanumerical string";
@@ -14,11 +15,11 @@ class CombiningValidatorsTest extends PHPUnit_Framework_TestCase {
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

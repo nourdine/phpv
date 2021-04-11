@@ -1,20 +1,21 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\validator\single\native\AlphaNumericalValidator;
 use phpv\input\KeyValue;
 
-class AlphaNumericalValidatorTest extends PHPUnit_Framework_TestCase {
+class AlphaNumericalValidatorTest extends TestCase {
 
    const NAAN_MESSAGE = "not a alphanumerical string";
 
    private $fv = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->fv = new KeyValueSetValidator();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->fv);
    }
 

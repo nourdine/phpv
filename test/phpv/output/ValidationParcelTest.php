@@ -1,20 +1,21 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use phpv\output\Error;
 use phpv\output\ValidationParcel;
 use phpv\validator\single\native\EmailValidator;
 use phpv\validator\set\KeyValueSetValidator;
 use phpv\input\KeyValue;
 
-class ValidationParcelTest extends PHPUnit_Framework_TestCase {
+class ValidationParcelTest extends TestCase {
 
    private $parcel = null;
 
-   public function setUp() {
+   public function setUp() : void {
       $this->parcel = new ValidationParcel();
    }
 
-   public function tearDown() {
+   public function tearDown() : void {
       unset($this->parcel);
    }
 
@@ -61,10 +62,9 @@ class ValidationParcelTest extends PHPUnit_Framework_TestCase {
       $this->assertFalse(is_null($pr));
    }
 
-   /**
-    * @expectedException \RuntimeException
-    */
    public function testErrorPrinterWithLeafValidator() {
+      $this->expectException(\RuntimeException::class);
+
       $emailV = new EmailValidator(new KeyValue("email", "jedi@nourdine.net"), "error");
       $out = $emailV->getValidationOutput();
       $pr = $out->getErrorPrinter();
