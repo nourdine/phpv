@@ -3,17 +3,17 @@ PHPV
 
 ### 1. Intro
 
-**phpv** is a data validation framework for php. The framework can be used in a wide range of scenarios and **NOT** necessarilly for data form validation over the internet (although that will be the purpose for which you are likely to use it the most). _phpv_ has been conceived with the [http://en.wikipedia.org/wiki/Composite_pattern composite pattern] in mind and thanks to this approach the validation of a single piece of data or the validation of a group of values (a form) can be carried out uniformely and taking exactly the same actions on the objects involved (more on this in paragraph 4 and 5).
+**phpv** is a data validation framework for php. The framework can be used in a wide range of scenarios and **NOT** necessarilly for data form validation over the internet (although that will be the purpose for which you are likely to use it the most). _phpv_ has been conceived with the [Composite Pattern](http://en.wikipedia.org/wiki/Composite_pattern) in mind and thanks to this approach the validation of a single piece of data or the validation of a group of values (a form) can be carried out uniformely and taking exactly the same actions on the objects involved (more on this in paragraph 4 and 5).
 
 ### 2. Class loader
 
-In order to have _phpv_ up and running you have to load it first. Here are the bare (coding) necessities *you must fullfill* in order to have a fully working environment.
+Once you have added phpv to your `composer.json` and run `composer install` you can then load your dependencies using the following:
 
 ```php
 include_once 'vendor/autoload.php';
 ```
 
-Once this code has been executed, you can start using _phpv_ classes freely in your code without having to explicitly make all the files imports.
+You probably knew this already but I thought to specify it anyway ;)
 
 ### 3. Validator
 
@@ -246,7 +246,7 @@ class BadWordsValidator extends KeyValueValidator {
    }
 
    /**
-    * This is the override of the absatract method inherited from the parent!
+    * This is the override of the abstract method inherited from the parent!
     * It is where the magic takes place ;)
     */
    public function validate() {
