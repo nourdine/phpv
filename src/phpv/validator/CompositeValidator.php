@@ -17,6 +17,7 @@ abstract class CompositeValidator extends Validator {
 
    /**
     * Returns the number of contained validators.
+    *
     * @return integer 
     */
    public function countValidators() {
@@ -25,6 +26,7 @@ abstract class CompositeValidator extends Validator {
    
    /**
     * Add a validator if not already in the list.
+    *
     * @param Validator $validator The validator to be added.
     */
    public function addValidator(Validator $validator) {
@@ -38,6 +40,7 @@ abstract class CompositeValidator extends Validator {
 
    /**
     * Remove a validator.
+    *
     * @param Validator $validator The validator to be removed.
     */
    public function removeValidator(Validator $validator) {

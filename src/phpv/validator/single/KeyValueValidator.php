@@ -17,6 +17,7 @@ abstract class KeyValueValidator extends LeafValidator {
 
    /**
     * Use this method in KeyValueValidator::validate to regist errors that will then mark as unvalid the current validator itself.
+    *
     * @param string $errorMessage The error message 
     */
    protected function registerError($errorMessage) {

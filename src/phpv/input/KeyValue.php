@@ -25,7 +25,9 @@ class KeyValue {
     * Creates a KeyValue object retrieving the value from $argv. Use this method in CLI scripts only!
     * If the index doesn't exist in $argv array then a KeyValue containing an empty string is returned.
     * [HEY] $paramIndex is ZERO-indexed so the first parameter you pass the CLI has an index of 0 and so on.
+    *
     * @param integer $paramIndex The index of the value to retrieve from the $argv array.
+    *
     * @return KeyValue
     */
    public static function obtainFromCLI($paramIndex) {
@@ -43,7 +45,9 @@ class KeyValue {
 
    /**
     * Creates a KeyValue object retrieving the value form $_REQUEST.
+    *
     * @param string $paramName The name of the value to retrieve and chuck in KeyValue object.
+    *
     * @return KeyValue
     */
    public static function obtainFromHTTP($paramName) {
@@ -62,11 +66,11 @@ class KeyValue {
       $this->value = $value;
    }
 
-   function getKey() {
+   public function getKey() {
       return $this->key;
    }
 
-   function getValue() {
+   public function getValue() {
       return $this->value;
    }
 }

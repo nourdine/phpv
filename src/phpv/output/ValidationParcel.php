@@ -8,6 +8,7 @@ use phpv\output\printer\ErrorPrinter;
 
 /**
  * Logical representation of the validation process carrying info about the non-validating bits of info and the related error messages.
+ * 
  * @method string displayErrors() Magic method returning a string reporting the validation errors. This method proxies ErrorPrinter::displayErrors.
  */
 class ValidationParcel {
@@ -44,7 +45,8 @@ class ValidationParcel {
 
    /**
     * Whether or not the parcel contains all valid data.
-    * @return type 
+    *
+    * @return boolean
     */
    public function isValid() {
       return $this->valid;
@@ -52,6 +54,7 @@ class ValidationParcel {
 
    /**
     * Return the number of errors.
+    *
     * @return integer 
     */
    public function numOfErrors() {
@@ -61,6 +64,7 @@ class ValidationParcel {
    /**
     * Return a multidimensional associative array containing the error messages associated to each piece of information being validated.
     * Each validated piece of information can contain a single error message (string) or a whole array of them.
+    *
     * @return array
     */
    public function getPackedErrors() {
@@ -85,7 +89,8 @@ class ValidationParcel {
 
    /**
     * Get an ErrorPrinter pre-loaded with the errors contained by the parcel.
-    * You will prolly not use this method much as the internal ErrorPrinter can be proxied directly using ValidationParcel::_call  
+    * You will prolly not use this method much as the internal ErrorPrinter can be proxied directly using ValidationParcel::_call
+    *
     * @return ErrorPrinter
     */
    public function getErrorPrinter() {

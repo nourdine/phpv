@@ -323,7 +323,7 @@ In the following table are listed all the leaf validators netively supported by 
    <tr>
       <td>`EmailValidator`</td>
       <td>Check if a `KeyValue` is actually a valid email (optial DNS check available)</td>
-      <td>`KeyValue $kv, $errorMessage [, $remoteCheck = false]`</td>
+      <td>`KeyValue $kv, $errorMessage`</td>
    </tr>
    <tr>
       <td>`EqualityValidator`</td>

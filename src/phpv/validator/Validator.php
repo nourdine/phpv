@@ -21,6 +21,7 @@ abstract class Validator {
 
    /**
     * Validate and return the result of validation.
+    *
     * @return ValidationParcel An object describing the validation state of the wrapped data.
     */
    public final function getValidationOutput() {
@@ -36,6 +37,7 @@ abstract class Validator {
 
    /**
     * Returns an array containing all the values to be validated.
+    *
     * @return array
     */
    abstract public function getCollectedValues();
