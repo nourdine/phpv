@@ -13,7 +13,7 @@ Once you have added phpv to your `composer.json` and run `composer install` you 
 include_once 'vendor/autoload.php';
 ```
 
-You probably knew this already but I thought to specify it anyway ;)
+You probably knew this already but I thought to make it clear anyway ;)
 
 ### 3. Validator
 
