@@ -1,47 +1,51 @@
 <?php
 
+declare(strict_types=1);
+
 namespace phpv\validator;
 
 use phpv\output\ValidationParcel;
 use phpv\output\printer\ErrorPrinter;
 
 /**
- * Abstract root class with validation purposes.
+ * Abstract root class with validation purposes
  */
-abstract class Validator {
-
-   protected $parcel = null;
+abstract class Validator
+{
+   protected $parcel;
 
    /**
-    * @param ErrorPrinter $printer The printer to be used to output error messages. 
+    * @param ErrorPrinter $printer The printer to be used to output error messages
     */
-   public function __construct(ErrorPrinter $printer = null) {
+   public function __construct(?ErrorPrinter $printer)
+   {
       $this->parcel = new ValidationParcel($printer);
    }
 
    /**
     * Validate and return the result of validation.
     *
-    * @return ValidationParcel An object describing the validation state of the wrapped data.
+    * @return ValidationParcel An object describing the validation state of the wrapped data
     */
-   public final function getValidationOutput() {
+   public final function getValidationOutput()
+   {
       $this->validate();
       return $this->parcel;
    }
 
    /**
     * Don't ever call this method directly but simply implement it!
-    * Validator::getValidationOutput is responsible for calling this method.
+    * Validator::getValidationOutput is responsible for calling this method
     */
    abstract public function validate();
 
    /**
-    * Returns an array containing all the values to be validated.
+    * Returns an array containing all the values to be validated
     *
     * @return array
     */
    abstract public function getCollectedValues();
-   
+
    abstract public function addValidator(Validator $v);
 
    abstract public function removeValidator(Validator $validatorToRemove);
