@@ -1,0 +1,27 @@
+{
+   "name": "nourdine/phpv",
+   "type": "library",
+   "description": "A validation framework based on the glorious composite pattern",
+   "keywords": [
+      "validation"
+   ],
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "nourdine"
+      }
+   ],
+   "require-dev": {
+      "phpunit/phpunit": "^9.5"
+   },
+   "autoload": {
+      "psr-4": {
+         "Phpv\\": "src/"
+      }
+   },
+   "scripts": {
+      "test": {
+         "test": "phpunit ./test"
+      }
+   }
+}
